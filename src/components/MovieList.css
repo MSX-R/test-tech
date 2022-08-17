@@ -1,0 +1,43 @@
+.card {
+  border: 5px solid #979696;
+  background-color: #adadad;
+  margin: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  width: 250px;
+  color: rgb(21, 21, 21);
+;
+}
+
+.posterMovieTitle {
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 100%;
+  padding: 5px;
+}
+
+.posterMovie {
+  width: auto;
+  height: 100%;
+
+}
+
+
+
+
+
+.ranking {
+  text-align: right;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: transparent;
+}

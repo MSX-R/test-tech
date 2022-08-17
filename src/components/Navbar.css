@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--color4);
+  padding: 10px;
+  max-height: 50px;
+}
+
+.navbarToggle {
+  background: none;
+  border: 2px solid transparent;
+}
+
+.menuIconOpen {
+  width: 4rem;
+  height: 4rem;
+  color: var(--color3);
+}
+
+.topSlider{
+    height: 150px;
+    border-bottom: 7px solid var(--color5);
+
+}
+
+.blurMask{
+    position: absolute;
+    top:0;
+    left: 0;
+height: 153px;
+width: 100%;
+z-index: 11;
+}
+
+.tv {
+    width: 230px;
+    position: relative;
+    top: 80%;
+    left: 10%;
+    transform: translate(-10%, -25%);
+    filter: drop-shadow(-5px -5px 0.0rem var(--color4));
+    
+}

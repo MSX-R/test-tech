@@ -1,0 +1,36 @@
+.container {
+  margin: 45px 10px;
+}
+
+.container > h2 {
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.topTen {
+  border: 2px solid red;
+  height: 600px;
+  background-color: lightblue;
+}
+
+.top1140Title {
+  margin: 0px 10px -10px 10px;
+}
+
+.movieCard {
+  width: auto;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+  color: black;
+}
+
+.bgCards {
+  display: flex;
+  flex-direction: row;
+  overflow: auto hidden;
+  scroll-behavior: smooth;
+  background-color: var(--color4);
+  margin: 20px 0 0 0;
+  border-top: 7px solid var(--color5);
+}
