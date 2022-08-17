@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import MovieList from "../components/MovieList";
-import Slider from "../components/Slider";
+import SliderTop40 from "../components/SliderTop40";
+import DisplayTop10 from "../components/DisplayTop10";
 
 const Home = () => {
   const [top10, setTop10] = useState([]);
@@ -57,24 +57,6 @@ const Home = () => {
     callingAPI3();
   }, [top2040]);
 
-  const [genre, setGenre] = useState([]);
-
-  useEffect(() => {
-    const searchingGenre = async () => {
-      await axios
-        .get(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
-        )
-        .then((response) => response.data)
-        .then((data) => {
-          setGenre(data.genres);
-        });
-    };
-
-    searchingGenre();
-    console.log("Affiche les genres", genre);
-  }, []);
-
   return (
     <div className="home">
       <Navbar top10={top10} top40={top40} />
@@ -85,7 +67,7 @@ const Home = () => {
           <br />
           FILMS POPULAIRES
         </h2>
-        <Slider top10={top10} />
+        <DisplayTop10 top10={top10} />
       </div>
 
       <div>
@@ -93,13 +75,8 @@ const Home = () => {
           SUITE DU CLASSEMENT <br /> 11 -> 40
         </h2>
         <div className="bgCards">
-          {top40.map((next30, index, id, genre) => (
-            <MovieList
-              index={index + 11}
-              movie={next30}
-              id={id}
-              genre={genre}
-            />
+          {top40.map((next30, index, key) => (
+            <SliderTop40 index={index + 11} movie={next30} key={index} />
           ))}
         </div>
       </div>

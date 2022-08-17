@@ -27,7 +27,7 @@ const Navbar = ({ top40 }) => {
         className="mySwiper2 mySwiperOff"
       >
         {top40.map((next30, index) => (
-          <SwiperSlide className="topSlider">
+          <SwiperSlide className="topSlider" key={index}>
             <img
               src={`${baseImgUrl}/${size}${next30.backdrop_path}`}
               alt="poster"
