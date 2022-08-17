@@ -8,12 +8,6 @@
   font-size: 30px;
 }
 
-.topTen {
-  border: 2px solid red;
-  height: 600px;
-  background-color: lightblue;
-}
-
 .top1140Title {
   margin: 0px 10px -10px 10px;
 }
@@ -33,4 +27,21 @@
   background-color: var(--color4);
   margin: 20px 0 0 0;
   border-top: 7px solid var(--color5);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 70px auto;
+  }
+
+  .top10Title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
 }

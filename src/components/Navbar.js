@@ -12,7 +12,7 @@ const size = "w500";
 
 const Navbar = ({ top40 }) => {
   return (
-    <>
+    <div className="navbar wallpaper">
       <div className="blurMask">
         <img src={tv} alt="tv" className="tv" />
       </div>
@@ -24,7 +24,7 @@ const Navbar = ({ top40 }) => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper2"
+        className="mySwiper2 mySwiperOff"
       >
         {top40.map((next30, index) => (
           <SwiperSlide className="topSlider">
@@ -36,7 +36,7 @@ const Navbar = ({ top40 }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

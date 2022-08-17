@@ -76,18 +76,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       <Navbar top10={top10} top40={top40} />
 
       <div className="container">
-        <h2 className="uppercase marginTopBottom10 txtRight top10Title">TOP 10<br/>
+        <h2 className="uppercase marginTopBottom10 txtRight top10Title">
+          TOP 10
+          <br />
           FILMS POPULAIRES
         </h2>
         <Slider top10={top10} />
       </div>
 
       <div>
-      <h2 className="uppercase marginTopBottom10 txtRight top10Title top1140Title">SUITE DU CLASSEMENT <br/> 11 -> 40</h2>
+        <h2 className="uppercase marginTopBottom10 txtRight top10Title top1140Title">
+          SUITE DU CLASSEMENT <br /> 11 -> 40
+        </h2>
         <div className="bgCards">
           {top40.map((next30, index, id, genre) => (
             <MovieList

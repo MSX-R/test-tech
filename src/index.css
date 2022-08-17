@@ -1,72 +1,68 @@
 :root {
-    /* font-size: 62.5%; */
-    /* COLORS VARIABLES */
-    --color1: #BF0404;/*   var(--color1)   */
-    --color2: #0d0d0d86;/*   var(--color2)   */
-    --color3 : #F2F2F2;/*   var(--color3)   */
-    --color4: #ffa500;/*   var(--color4)   */
-    --color5: #386a6c;/*   var(--color5)   */
-
+  --color1: #bf0404; /*   var(--color1)   */
+  --color2: #0d0d0d86; /*   var(--color2)   */
+  --color3: #f2f2f2; /*   var(--color3)   */
+  --color4: #ffa500; /*   var(--color4)   */
+  --color5: #386a6c; /*   var(--color5)   */
 }
 
 .row {
-    display : flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .spaced_row {
-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .spaced_column {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .txtRight {
-    text-align: right;
+  text-align: right;
 }
 
 .txtCenter {
-    text-align: center;
+  text-align: center;
 }
 
 .txtLeft {
-   text-align: left;
+  text-align: left;
 }
 
-
 .hidden {
-    display: none;
+  display: none;
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .padding_box {
-    padding: 5px;
+  padding: 5px;
 }
 
-.textCentered{
-    text-align: center;
+.textCentered {
+  text-align: center;
 }
 
-.marginTopBottom10{
-    margin: 10px 0;
+.marginTopBottom10 {
+  margin: 10px 0;
 }

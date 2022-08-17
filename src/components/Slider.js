@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
@@ -52,7 +52,6 @@ const Slider = ({ top10 }) => {
                 | Accéder à la Description du film |
               </button>
             </div>
-
             <div
               className={
                 isVisible ? "sliderDescription" : "sliderDescription hidden"
