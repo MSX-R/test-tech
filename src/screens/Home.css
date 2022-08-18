@@ -25,7 +25,9 @@
   overflow: auto hidden;
   scroll-behavior: smooth;
   background-color: var(--color4);
-  margin: 20px 0 0 0;
+
+  margin: 20px auto 0;
+  padding: 20px;
   border-top: 7px solid var(--color5);
 }
 
@@ -34,12 +36,27 @@
   .container {
     display: flex;
     flex-direction: column;
-    margin: 70px auto;
+    margin: 45px auto;
+    width: 60vw;
   }
 
   .top10Title {
     text-align: center;
     margin-bottom: 40px;
+  }
+
+  /* */
+  .bgCards {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto hidden;
+    scroll-behavior: smooth;
+    background-color: var(--color4);
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 7px solid var(--color5);
   }
 }
 

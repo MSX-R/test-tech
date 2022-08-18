@@ -54,7 +54,7 @@ const DisplayTop10 = ({ top10 }) => {
           const movieGenre = movie.genre_ids;
           return (
             <SwiperSlide className="sliderCard" key={index}>
-              <div>
+              <div className="detailsTop10">
                 <h4 className="sliderPosterMovieTitle uppercase">
                   {movie.title}
                 </h4>
@@ -78,8 +78,8 @@ const DisplayTop10 = ({ top10 }) => {
                   {" "}
                   | Accéder à la Description du film |
                 </button>
-              </div>
-              <div
+                
+                <div
                 className={
                   isVisible ? "sliderDescription" : "sliderDescription hidden"
                 }
@@ -90,6 +90,9 @@ const DisplayTop10 = ({ top10 }) => {
                     : movie.overview.substring(0, 120) + "..."}
                 </p>
               </div>
+
+              </div>
+              
             </SwiperSlide>
           );
         })}

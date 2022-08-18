@@ -8,6 +8,7 @@
   height: auto;
   width: 250px;
   color: rgb(21, 21, 21);
+  border-radius: 20px;
 }
 
 .posterMovieTitle {
