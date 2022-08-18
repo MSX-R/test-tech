@@ -48,9 +48,9 @@
   /* */
   .bgCards {
     width: 80vw;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /* display: flex;
+    justify-content: space-around; */
+    /* flex-wrap: wrap; */
     overflow: auto hidden;
     scroll-behavior: smooth;
     background-color: var(--color4);
