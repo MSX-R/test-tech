@@ -21,8 +21,6 @@ const DisplayTop10 = ({ top10, listGenre }) => {
     setIsVisible(!isVisible);
   }
 
-  
-
   return (
     <>
       <Swiper
@@ -48,7 +46,8 @@ const DisplayTop10 = ({ top10, listGenre }) => {
                   {" "}
                   {movieGenre
                     .map(
-                      (elGenre) => listGenre.find((el) => el.id == elGenre).name
+                      (elGenre) =>
+                        listGenre && listGenre.find((el) => el.id == elGenre).name
                     )
                     .join(", ")}{" "}
                 </div>

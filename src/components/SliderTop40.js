@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SliderTop40.css";
 import axios from "axios";
 
-const SliderTop40 = ({ movie, index, apiKEY, listGenre }) => {
+const SliderTop40 = ({ movie, index, listGenre }) => {
   const baseImgUrl = "https://image.tmdb.org/t/p";
   const size = "w500";
 

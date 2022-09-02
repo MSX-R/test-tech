@@ -11,13 +11,14 @@ const Home = () => {
   const [top2040, setTop2040] = useState([]);
   const [top40, setTop40] = useState([]);
 
-  const apiKEY = "23bf19828d3b1371041e35c30a6e9db1";
+  const apiKEY = 'c89646cb9c2f9f7a6144c074fff0e9c7'
 
   useEffect(() => {
     const callingAPI = async () => {
       await axios
         .get(
           `https://api.themoviedb.org/3/movie/popular?api_key=${apiKEY}&language=fr-FR&page=1`
+          // `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=1` avec processus ENV
         )
         .then((response) => response.data)
         .then((data) => {
