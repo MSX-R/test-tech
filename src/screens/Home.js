@@ -18,7 +18,7 @@ const Home = () => {
       await axios
         .get(
           `https://api.themoviedb.org/3/movie/popular?api_key=${apiKEY}&language=fr-FR&page=1`
-          // `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=1` avec processus ENV
+          // `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=1` avec process.env
         )
         .then((response) => response.data)
         .then((data) => {
