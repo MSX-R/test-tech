@@ -1,7 +1,7 @@
 # Test tech 🟡 - Plateforme VOD
 
 Projet réalisé par [MSX-R](https://github.com/MSX-R "lien github profile").
-Lien du site déployé: [https://msx-r.github.io/test-tech/](https://msx-r.github.io/test-tech/)
+> Lien du site déployé: [https://msx-r.github.io/test-tech/](https://msx-r.github.io/test-tech/)
 
 # En quoi consiste le projet ?
 
