@@ -13,7 +13,7 @@ const baseImgUrl = "https://image.tmdb.org/t/p";
 
 const size = "w500";
 
-const DisplayTop10 = ({ top10 }) => {
+const DisplayTop10 = ({ top10, listGenre }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   function showOverview(e) {
@@ -21,22 +21,7 @@ const DisplayTop10 = ({ top10 }) => {
     setIsVisible(!isVisible);
   }
 
-  const [category, setCategory] = useState([]);
-  const [listGenre, setListGenre] = useState([]);
-
-  useEffect(() => {
-    const searchingGenre = async () => {
-      await axios
-        .get(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
-        )
-        .then((response) => response.data)
-        .then((data) => {
-          setListGenre(data.genres);
-        });
-    };
-    searchingGenre();
-  }, []);
+  
 
   return (
     <>
@@ -79,21 +64,19 @@ const DisplayTop10 = ({ top10 }) => {
                   {" "}
                   | Accéder à la Description du film |
                 </button>
-                
-                <div
-                className={
-                  isVisible ? "sliderDescription" : "sliderDescription hidden"
-                }
-              >
-                <p className="description">
-                  {movie.overview.length <= 120
-                    ? movie.overview
-                    : movie.overview.substring(0, 120) + "..."}
-                </p>
-              </div>
 
+                <div
+                  className={
+                    isVisible ? "sliderDescription" : "sliderDescription hidden"
+                  }
+                >
+                  <p className="description">
+                    {movie.overview.length <= 120
+                      ? movie.overview
+                      : movie.overview.substring(0, 120) + "..."}
+                  </p>
+                </div>
               </div>
-              
             </SwiperSlide>
           );
         })}

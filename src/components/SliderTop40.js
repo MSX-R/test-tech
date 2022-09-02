@@ -2,26 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./SliderTop40.css";
 import axios from "axios";
 
-const SliderTop40 = ({ movie, index }) => {
+const SliderTop40 = ({ movie, index, apiKEY, listGenre }) => {
   const baseImgUrl = "https://image.tmdb.org/t/p";
   const size = "w500";
 
   const [category, setCategory] = useState([]);
-  const [listGenre, setListGenre] = useState([]);
-
-  useEffect(() => {
-    const searchingGenre = async () => {
-      await axios
-        .get(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
-        )
-        .then((response) => response.data)
-        .then((data) => {
-          setListGenre(data.genres);
-        });
-    };
-    searchingGenre();
-  }, []);
 
   useEffect(() => {
     if (listGenre.length) {

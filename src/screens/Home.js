@@ -11,11 +11,13 @@ const Home = () => {
   const [top2040, setTop2040] = useState([]);
   const [top40, setTop40] = useState([]);
 
+  const apiKEY = "23bf19828d3b1371041e35c30a6e9db1";
+
   useEffect(() => {
     const callingAPI = async () => {
       await axios
         .get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKEY}&language=fr-FR&page=1`
         )
         .then((response) => response.data)
         .then((data) => {
@@ -31,7 +33,7 @@ const Home = () => {
     const callingAPI2 = async () => {
       await axios
         .get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=2`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKEY}&language=fr-FR&page=2`
         )
         .then((response) => response.data)
         .then((data) => {
@@ -46,7 +48,7 @@ const Home = () => {
     const callingAPI3 = async () => {
       await axios
         .get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR&page=3`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKEY}&language=fr-FR&page=3`
         )
         .then((response) => response.data)
         .then((data) => {
@@ -56,6 +58,21 @@ const Home = () => {
 
     callingAPI3();
   }, [top2040]);
+
+  const [listGenre, setListGenre] = useState([]);
+  useEffect(() => {
+    const searchingGenre = async () => {
+      await axios
+        .get(
+          `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKEY}&language=fr-FR`
+        )
+        .then((response) => response.data)
+        .then((data) => {
+          setListGenre(data.genres);
+        });
+    };
+    searchingGenre();
+  }, []);
 
   return (
     <div className="home">
@@ -67,16 +84,16 @@ const Home = () => {
           <br />
           FILMS POPULAIRES
         </h2>
-        <DisplayTop10 top10={top10} />
+        <DisplayTop10 top10={top10} listGenre={listGenre} />
       </div>
 
       <div>
         <h2 className="uppercase marginTopBottom10 txtRight top10Title top1140Title">
-          SUITE DU CLASSEMENT <br /> 11 -> 40
+          SUITE DU CLASSEMENT <br /> 11 - 40
         </h2>
         <div className="bgCards">
           {top40.map((next30, index, key) => (
-            <SliderTop40 index={index + 11} movie={next30} key={index} />
+            <SliderTop40 index={index + 11} movie={next30} key={index} listGenre={listGenre} />
           ))}
         </div>
       </div>
