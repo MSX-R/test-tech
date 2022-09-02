@@ -16,8 +16,7 @@ Lien du site déployé: [https://msx-r.github.io/test-tech/](https://msx-r.githu
 
 # Galerie
 
-<a href="https://msx-r.github.io/test-tech/" ><img src="https://i.goopics.net/gm9oas.png" alt="Image" style="width:295px"> <img src="https://i.goopics.net/y4yv2e.png" alt="Image" style="width:163px"> <img src="https://i.goopics.net/g3924m.png" alt="Image" style="width:80px">  
-</a>
+<img src="https://i.goopics.net/gm9oas.png" alt="Image" style="width:295px"> <img src="https://i.goopics.net/vqdct2.png" alt="Image" style="width:129px">
 
 # Obtention des données (API)
 
