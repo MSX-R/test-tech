@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css";
 
 const baseImgUrl = "https://image.tmdb.org/t/p";
+
 const size = "w500";
 
 const DisplayTop10 = ({ top10 }) => {
